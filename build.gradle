@@ -1,0 +1,49 @@
+// Gradle 플러그인 설정
+plugins {
+    id 'java'  // Java 플러그인 추가
+}
+
+// // 프로젝트 설정
+// group = 'com.example'
+// version = '1.0-SNAPSHOT'
+
+// Java 소스 호환성 설정 (필요에 따라 버전 변경 가능)
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+// 저장소 설정
+repositories {
+    mavenCentral()  // JUnit과 같은 의존성을 다운로드할 저장소
+}
+
+// 의존성 설정
+dependencies {
+    // JUnit 5 (Jupiter) 의존성 추가
+    implementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    implementation 'org.assertj:assertj-core:3.23.1'
+    runtimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+// 테스트 태스크 설정
+test {
+    useJUnitPlatform()  // JUnit 5 플랫폼 사용
+    // testLogging {
+    //     events "passed", "skipped", "failed"  // 테스트 결과 출력 설정
+    // }
+}
+
+// 소스 디렉토리 설정
+sourceSets {
+    main {
+        java {
+            srcDirs = ['linear-structure']  // linear-structure 디렉토리를 Java 소스 디렉토리로 설정
+        }
+    }
+    test {
+        java {
+            srcDirs = ['linear-structure']  // 테스트 소스도 동일한 디렉토리에서 관리
+        }
+    }
+}
