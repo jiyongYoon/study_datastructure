@@ -27,9 +27,9 @@ public class MyLinkedList<T> implements Iterable<T> {
     }
   }
 
-  private MyNode<T> head;
-  private MyNode<T> tail;
-  private int size;
+  protected MyNode<T> head;
+  protected MyNode<T> tail;
+  protected int size;
 
   public MyLinkedList() {}
 
@@ -147,7 +147,7 @@ public class MyLinkedList<T> implements Iterable<T> {
 
     return newList;
   }
-  private MyNode<T> getNode(int index) {
+  protected MyNode<T> getNode(int index) {
     try {
       MyNode<T> current = this.head;
       for (int i = 0; i < index; i++) {

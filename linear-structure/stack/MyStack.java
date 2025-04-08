@@ -3,7 +3,7 @@ package stack;
 public class MyStack<T> {
   private final int defaultSize = 100;
 
-  private int size;
+  private int size; // top의 위치
   private Object[] arr;
 
   public MyStack() {
