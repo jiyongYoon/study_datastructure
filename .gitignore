@@ -3,3 +3,5 @@ TS-TEST
 .vscode
 .gradle
 build
+
+node_modules
