@@ -38,12 +38,12 @@ test {
 sourceSets {
     main {
         java {
-            srcDirs = ['linear-structure']  // linear-structure 디렉토리를 Java 소스 디렉토리로 설정
+            srcDirs = ['linear-structure', 'non-linear-structure']  // 메인 소스 디렉토리 설정
         }
     }
     test {
         java {
-            srcDirs = ['linear-structure']  // 테스트 소스도 동일한 디렉토리에서 관리
+            srcDirs = ['linear-structure', 'non-linear-structure']
         }
     }
 }
