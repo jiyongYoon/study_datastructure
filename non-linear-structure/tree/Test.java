@@ -1,5 +1,7 @@
 package tree;
 
+import tree.MyBinarySearchTree.TreeMetaInfo;
+
 public class Test {
 
   public static void main(String[] args) {
@@ -19,7 +21,9 @@ public class Test {
     myBinarySearchTree.insertNode(new TreeNode<Integer>(19));
     myBinarySearchTree.insertNode(new TreeNode<Integer>(18));
 
-
+    System.out.println("------------------------------------------------------------------------------");
+    TreeMetaInfo treeMetaInfo1 = myBinarySearchTree.getTreeMetaInfo();
+    System.out.println(treeMetaInfo1);
     myBinarySearchTree.printTree();
     System.out.println("------------------------------------------------------------------------------");
 
@@ -93,6 +97,33 @@ public class Test {
     myBinarySearchTree2.deleteNode(new TreeNode<Integer>(7));
     myBinarySearchTree2.printTree();
     System.out.println("------------------------------------------------------------------------------");
+    System.out.println("------------------------------------------------------------------------------");
+
+    MyBinarySearchTree<String> myBinarySearchTree3 = new MyBinarySearchTree<>();
+    myBinarySearchTree3.insertNode(new TreeNode<>("kiwi"));
+    myBinarySearchTree3.printTree();
+    System.out.println("------------------------------------------------------------------------------");
+    myBinarySearchTree3.insertNode(new TreeNode<>("banana"));
+    myBinarySearchTree3.printTree();
+    System.out.println("------------------------------------------------------------------------------");
+    myBinarySearchTree3.insertNode(new TreeNode<>("apple"));
+    myBinarySearchTree3.printTree();
+    System.out.println("------------------------------------------------------------------------------");
+    myBinarySearchTree3.insertNode(new TreeNode<>("watermelon"));
+    myBinarySearchTree3.printTree();
+    System.out.println("------------------------------------------------------------------------------");
+    myBinarySearchTree3.insertNode(new TreeNode<>("strawberry"));
+    myBinarySearchTree3.printTree();
+    System.out.println("------------------------------------------------------------------------------");
+    myBinarySearchTree3.insertNode(new TreeNode<>("grape"));
+    myBinarySearchTree3.printTree();
+    System.out.println("------------------------------------------------------------------------------");
+    myBinarySearchTree3.insertNode(new TreeNode<>("orange"));
+    myBinarySearchTree3.printTree();
+    System.out.println("------------------------------------------------------------------------------");
+
+    TreeMetaInfo treeMetaInfo = myBinarySearchTree3.getTreeMetaInfo();
+    System.out.println("treeMetaInfo = " + treeMetaInfo);
   }
 
 }
